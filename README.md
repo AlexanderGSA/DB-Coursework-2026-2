@@ -411,4 +411,70 @@ Código Fuente: [Repositorio GitHub](https://github.com/Jaely19/Patitas-Sanas)
 Demo en Vivo: [Patitas Sanas Web](https://patitas-sanas.vercel.app)
 
 
-### Proyecto 10
+## Proyecto 8: Scynara - Sistema de Gestión para Comercio Minorista
+Sistema web full-stack para la gestión de una tienda o cadena de sucursales, con control de inventario, proveedores, productos, ventas, clientes y usuarios/empleados.
+
+### 🛠️ Tecnologías
+* Frontend: React 19, Vite, React Router DOM, Axios
+* Backend: Node.js, Express 5
+* Base de datos: MySQL 
+* Autenticación: JWT, hashing con argon2
+* Validación: Zod
+* Despliegue: Railway y Vercel
+
+### ✨ Funcionalidades principales
+
+* Autenticación y gestión de usuarios
+* Gestión de proveedores
+* Gestión de productos / inventario
+* Gestión de ventas
+
+<details>
+<summary>🖼️ Ver capturas de pantalla</summary>
+<img width="1289" height="815" alt="principal" src="https://github.com/user-attachments/assets/4e0a99b5-fb40-44ab-9d35-57668798aaf8" />
+<img width="1289" height="815" alt="servicios" src="https://github.com/user-attachments/assets/4d0ae50e-22b0-4823-833f-0e30a2db2174" />
+</details>
+
+Código Fuente: Frontend [Repositorio](https://github.com/scynara09-hue/Scynara-Frontend)
+Código Fuente: Backend [Repositorio](https://github.com/scynara09-hue/Scynara-Backend)
+Demo en Vivo: [Página Web](https://scynara-frontend-nuv4w7vem-niv-s-projects2.vercel.app/)
+  
+
+## Proyecto 10: Notaría 105 (Sistema Integral de Gestión Notarial)
+Plataforma web segura diseñada específicamente para la **Notaría Pública 105** en la Ciudad de México. Este proyecto nace para resolver la necesidad de modernizar el flujo de trabajo notarial, eliminando el papeleo físico, previniendo la pérdida de documentos y centralizando la información en un entorno digital seguro bajo principios de auditoría estricta.
+ 
+El sistema funciona como un gestor relacional de expedientes que automatiza el ciclo de vida de los instrumentos jurídicos. Está diseñado bajo una arquitectura de tres perfiles: **Notario Titular** (administración total y control de personal), **Abogados Auxiliares** (gestión operativa y captura de datos) y **Clientes** (acceso externo). La plataforma permite registrar personas, redactar cláusulas legales, gestionar cobros y recabar firmas autógrafas digitales directamente en pantalla. Además, fomenta la transparencia mediante un portal ciudadano donde los clientes pueden consultar el estatus de sus trámites en tiempo real, garantizando la integridad de los datos mediante registros inmutables y transacciones SQL seguras.
+ 
+🛠️ Tecnologías Utilizadas
+* **Backend:** Python 3 con Flask (Enrutamiento, controladores y gestión de sesiones).
+* **Base de Datos:** PostgreSQL (Modelado relacional, transacciones ACID y control DCL) mediante el adaptador `psycopg2`.
+* **Seguridad:** `Werkzeug.security` para hashing criptográfico y `python-dotenv` para el aislamiento de variables de entorno.
+* **Frontend:** HTML5, CSS3, JavaScript Vanilla (integración con Canvas API) y framework Bootstrap 5 para diseño responsivo.
+* **Despliegue (Hosting):** Render (Backend) y alojamiento remoto de BD.
+ 
+✨ Funcionalidades principales
+* **Arquitectura de Seguridad Multi-Capa (Defensa en Profundidad):** Implementación de consultas SQL estrictamente parametrizadas para evitar inyecciones, encriptación de contraseñas mediante hash unidireccional (SHA-256), y segmentación de permisos a nivel de motor de base de datos (Roles DCL como `cliente_web` para restringir operaciones de escritura).
+* **Gestión de Expedientes (CRUD Relacional Complejo):** Sistema de altas de clientes y creación de escrituras con generación automática de folios estructurados. Manejo de relaciones avanzadas con tablas hijas para clasificar el trámite (Testamentos, Actas Constitutivas, Fe de Hechos, Compraventas).
+* **Pizarra de Firma Autógrafa Digital:** Módulo interactivo desarrollado en JavaScript (Canvas) que permite al cliente dibujar su rúbrica táctilmente. El sistema convierte los trazos a una cadena codificada en Base64 para su almacenamiento seguro e íntegro directamente en PostgreSQL.
+* **Auditoría Notarial y Borrado Lógico:** Cumplimiento de la secuencialidad de folios exigida por la ley. Las escrituras canceladas o con errores se ocultan del panel operativo principal mediante un `UPDATE` de estado (borrado lógico), preservando el registro en un panel de archivo histórico para futuras auditorías.
+* **Portal de Transparencia Ciudadana:** Interfaz de acceso restringido para clientes externos. Mediante validación de CURP y correo, el usuario visualiza el avance de sus escrituras (JOINs en tiempo real) sin poder alterar la base de datos.
+* **Generación de Documento Oficial:** Sistema de renderizado dinámico mediante Jinja2 y CSS para previsualizar el instrumento notarial final (formato carta) con la firma digital incrustada, listo para impresión o exportación.
+ 
+🖼️ Ver capturas de pantalla
+
+<img width="1600" height="755" alt="index" src="https://github.com/user-attachments/assets/9932b8ba-6d88-487d-8d2b-4411601c175e" />
+<img width="1600" height="757" alt="regisperso" src="https://github.com/user-attachments/assets/5dbdecb2-a3df-466c-8214-0cc138a0ec31" />
+<img width="1600" height="754" alt="abogado" src="https://github.com/user-attachments/assets/42c0483c-c947-4d44-b400-08c2e912a4ad" />
+<img width="1600" height="746" alt="regisclient" src="https://github.com/user-attachments/assets/446e047b-f2e5-4d17-b529-74141bc8edc4" />
+
+ 
+🔑 Credenciales de Acceso (Para Evaluación)
+Para ingresar al sistema con privilegios totales de administrador y evaluar el flujo completo (dashboard, creación de escrituras y alta de personal), utiliza la siguiente cuenta:
+* **Rol:** Notario Titular
+* **Usuario:** Jesus_Av@notaria105.com
+* **Contraseña:** 1234
+ 
+🔗 Enlaces
+* **Código Fuente:** [Repositorio Notaría 105](https://github.com/s06008525-max/notaria-105)
+* **Demo en Vivo:** [notaria105](http://roberto.notario@notaria105.com)
+  
