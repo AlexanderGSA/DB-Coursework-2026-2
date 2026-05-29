@@ -478,7 +478,7 @@ Para ingresar al sistema con privilegios totales de administrador y evaluar el f
 * **Código Fuente:** [Repositorio Notaría 105](https://github.com/s06008525-max/notaria-105)
 * **Demo en Vivo:** [notaria105](http://roberto.notario@notaria105.com)
   
-##😷 Proyecto 12: Sistema de Agendado de citas medicas
+##😷 Proyecto 99X: Sistema de Agendado de citas medicas
 Sistema web para el agendado y gestión de citas medicas en un hospital
 
 #🛠️ Tecnologías
